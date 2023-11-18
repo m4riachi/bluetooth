@@ -55,7 +55,7 @@ export class ItemsComponent implements OnInit {
     }).finally(() => {
       console.log("scanning finished");
     });
-    this.frequence = '66';
+    this.frequence = '75';
     this.adresse = '12 Rue Michel de Montaigne, 56000 Vannes';
     this.bluetooth.read({
       peripheralUUID: '00001101-0000-1000-8000-00805f9b34fb',
