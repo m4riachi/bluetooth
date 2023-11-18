@@ -1,4 +1,20 @@
-<ActionBar [title]="enabled ? 'Enabled' : 'Not Enabled'"> </ActionBar>
-<ng-container>
-    <Button (tap)="onTap()">Check</Button>
-</ng-container>
+<ActionBar [title]="'BlueTooth'"> </ActionBar>
+<StackLayout style="padding: 40px;font-size: 20px">
+    <Label style="margin-bottom: 60px" [text]="enabled ? 'Bluetooth : Enabled' : 'Bluetooth : Not Enabled'" (tap)="onTap()"></Label>
+
+    <DropDown #dd
+              backroundColor="red"
+              itemsTextAlignment="center"
+              [items]="items"
+              [(ngModel)]="selectedIndex"
+              row="0"
+              colSpan="2"></DropDown>
+    <Button text="DÉMARRER L'ACTIVITÉ" (tap)="onTap()"></Button>
+    <Button text="ARRÊTER L'ACTIVITÉ" (tap)="onTap()"></Button>
+
+    <Label style="margin-top: 60px" text="Données reçues" (tap)="onTap()"></Label>
+    <StackLayout style="border-width: 2; border-color: #000000; border-radius: 5;margin-top: 60px;padding: 20px">
+        <Label style="" [text]="'Fréquence cardiaque: ' + frequence + 'bpm'" ></Label>
+        <Label style="" [text]="'Localisation: ' + adresse" ></Label>
+    </StackLayout>
+</StackLayout>
